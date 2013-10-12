@@ -21,14 +21,16 @@ if(!window.Kolich){
         var st = Kolich.Selector.getSelected();
         if(st!=''){
           $(".popup").show();
-          $(".popup").css({"left": e.pageX, "top": e.pageY});
+          $(".popup").css({"left": e.pageX-40, "top": e.pageY-40});
         }else{
-          //$(".popup").hide();
+          $(".popup").hide();
         }
       }
       
       $(document).ready(function(){
-        $("body").append('<div class="popup">NEIL MARION</div>');
+        highlightMenu = '<div class="popup highlight-menu highlight-menu-active"><div class="highlight-menu-inner"><ul class="highlight-menu-buttons"><li class="highlight-menu-button highlight-menu-notes"><button class="btn-highlight-menu" data-action="highlight"><span class="icons icon-facebook"></span></button></li><li class="highlight-menu-button highlight-menu-twitter"><button class="btn-highlight-menu" data-action="twitter"><span class="icons icon-twitter"></span></button></li></ul></div></div>';
+
+        $("body").append(highlightMenu);
         $(document).bind("mouseup", Kolich.Selector.mouseup);
       });
 
