@@ -23,7 +23,7 @@ if(!window.Kolich){
           $(".popup").show();
           $(".popup").css({"left": e.pageX, "top": e.pageY});
         }else{
-          $(".popup").hide();
+          //$(".popup").hide();
         }
       }
       

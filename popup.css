@@ -8,3 +8,6 @@
   width: 240px;
   display: none;
 }
+
+.highlight-menu{position:absolute;display:inline-block;z-index:500;-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}
+.highlight-menu-active{visibility:visible;-webkit-transition:top .075s ease-out,left .075s ease-out;-moz-transition:top .075s ease-out,left .075s ease-out;-ms-transition:top .075s ease-out,left .075s ease-out;-o-transition:top .075s ease-out,left .075s ease-out;transition:top .075s ease-out,left .075s ease-out;-webkit-animation:pop-upwards 180ms forwards linear;-moz-animation:pop-upwards 180ms forwards linear;-ms-animation:pop-upwards 180ms forwards linear;-o-animation:pop-upwards 180ms forwards linear;animation:pop-upwards 180ms forwards linear}
