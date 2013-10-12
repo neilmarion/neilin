@@ -18,16 +18,17 @@ if(!window.Kolich){
       }
       
       Kolich.Selector.mouseup = function(e){
-        console.log(e.pageX);
-        console.log(e.pageY);
         var st = Kolich.Selector.getSelected();
         if(st!=''){
           $(".popup").show();
           $(".popup").css({"left": e.pageX, "top": e.pageY});
+        }else{
+          $(".popup").hide();
         }
       }
       
       $(document).ready(function(){
+        $("body").append('<div class="popup">NEIL MARION</div>');
         $(document).bind("mouseup", Kolich.Selector.mouseup);
       });
 
