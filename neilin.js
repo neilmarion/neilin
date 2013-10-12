@@ -17,10 +17,13 @@ if(!window.Kolich){
         return t;
       }
       
-      Kolich.Selector.mouseup = function(){
+      Kolich.Selector.mouseup = function(e){
+        console.log(e.pageX);
+        console.log(e.pageY);
         var st = Kolich.Selector.getSelected();
         if(st!=''){
-          alert("You selected:\n"+st);
+          $(".popup").show();
+          $(".popup").css({"left": e.pageX, "top": e.pageY});
         }
       }
       
@@ -28,8 +31,3 @@ if(!window.Kolich){
         $(document).bind("mouseup", Kolich.Selector.mouseup);
       });
 
-
-
-$("body").click(function(){
-  console.log("ready");
-});
