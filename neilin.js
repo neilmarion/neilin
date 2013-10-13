@@ -53,8 +53,8 @@ Neilin.Selector.mouseup = function(e){
 
     var st = Neilin.Selector.getSelected();
     if(st!=''){
-      $(".popup").show();
       $(".popup").css({"left": xy[x]-40, "top": xy[y]-65});
+      $(".popup").show();
     }else{
       $(".popup").hide();
     }
