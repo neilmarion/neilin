@@ -46,8 +46,6 @@ Neilin.Selector.mouseup = function(e){
   window.endX = e.pageX;
   window.endY = e.pageY;
 
-  console.log("startX: " + window.startX + " startY: " + window.startY + " endX: " + window.endX +  " endY: " + window.endY);
-
   if(window.startX + window.startY != window.endX + window.endY) {
     xy = computeXY(window.startX, window.startY, window.endX, window.endY);
 
@@ -55,6 +53,7 @@ Neilin.Selector.mouseup = function(e){
     if(st!=''){
       $(".popup").css({"left": xy[x]-40, "top": xy[y]-65});
       $(".popup").show();
+      // use e.target to get the clicked element
     }else{
       $(".popup").hide();
     }
