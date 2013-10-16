@@ -3,8 +3,6 @@ if(!window.Neilin){
 }
 
 Neilin.Selector = {};
-// getSelected() was borrowed from CodeToad at
-// http://www.codetoad.com/javascript_get_selected_text.asp
 Neilin.Selector.getSelected = function(){
   var t = '';
   if(window.getSelection){
@@ -17,7 +15,7 @@ Neilin.Selector.getSelected = function(){
   return t;
 }
 
-function computeXY(startX, startY, endX, endY){
+function computeXY(){
   range = Neilin.Selector.getSelected().getRangeAt(0);
   range.collapse(false);
   dummy = document.createElement("span");
@@ -37,29 +35,20 @@ function computeXY(startX, startY, endX, endY){
   addX = endX > startX ? startX : endX;
 
   x = Math.abs(endX - startX) / 2;
-  return [addX + x, y];
+  return {'x': addX + x, 'y': y}
 }
 
 Neilin.Selector.mouseup = function(e){
-  var x = 0; var y = 1;
-  var xy;
   window.endX = e.pageX;
   window.endY = e.pageY;
 
-  if(window.startX + window.startY != window.endX + window.endY) {
-    xy = computeXY(window.startX, window.startY, window.endX, window.endY);
 
-    var st = Neilin.Selector.getSelected();
-    if(st!=''){
-      $(".popup").css({"left": xy[x]-40, "top": xy[y]-65});
-      $(".popup").show();
-      // use e.target to get the clicked element
-    }else{
-      $(".popup").hide();
-    }
-    window.endX = e.pageX
-    window.endY = e.pageY
-  }else{
+  st = Neilin.Selector.getSelected();
+  if(window.startX + window.startY != window.endX + window.endY && st!='') {
+    xy = computeXY();
+    $(".popup").css({"left": xy['x']-40, "top": xy['y']-65});
+    $(".popup").show();
+  } else {
     $(".popup").hide();
   }
 }
@@ -75,6 +64,5 @@ $(document).ready(function(){
   $("body").append(highlightMenu);
   $(document).bind("mouseup", Neilin.Selector.mouseup);
   $(document).bind("mousedown", Neilin.Selector.mousedown);
-
 });
 
