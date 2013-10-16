@@ -59,7 +59,21 @@ Neilin.Selector.mousedown = function(e){
 }
 
 $(document).ready(function(){
-  highlightMenu = '<div class="popup highlight-menu highlight-menu-active"><div class="highlight-menu-inner"><ul class="highlight-menu-buttons"><li class="highlight-menu-button highlight-menu-notes"><button class="btn-highlight-menu" data-action="highlight"><span class="icons icon-facebook"></span></button></li><li class="highlight-menu-button highlight-menu-twitter"><button class="btn-highlight-menu" data-action="twitter"><span class="icons icon-twitter"></span></button></li></ul></div></div>';
+  highlightMenu = '<div class="popup highlight-menu highlight-menu-active">'+
+    '<div class="highlight-menu-inner">'+
+      '<ul class="highlight-menu-buttons">'+
+        '<li class="highlight-menu-button highlight-menu-notes">'+
+          '<button class="btn-highlight-menu" data-action="highlight">'+
+            '<span class="icons icon-facebook"></span>'+
+          '</button></li>'+
+        '<li class="highlight-menu-button highlight-menu-twitter">'+
+          '<button class="btn-highlight-menu" data-action="twitter">'+
+            '<span class="icons icon-twitter"></span>'+
+          '</button>'+
+        '</li>'+
+      '</ul>'+
+    '</div>'+
+  '</div>';
 
   $("body").append(highlightMenu);
   $(document).bind("mouseup", Neilin.Selector.mouseup);
