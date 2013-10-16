@@ -29,10 +29,11 @@
   padding:0;white-space:nowrap;font-size:0
 }
 .highlight-menu-buttons .highlight-menu-button { 
-  display:inline-block;
-  text-align:center;
-  vertical-align:middle
-}.btn-highlight-menu{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+.btn-highlight-menu{
   display:block;
   background:rgba(0,0,0,0);
   border:0;
@@ -55,10 +56,29 @@
 .highlight-menu-button.active .icons:before{
   color:#60d778
 }
-.highlight-menu-buttons .icons-link:before{position:relative;top:1px}
-.highlight-menu-notes .icons-notes{position:relative}
-.highlight-menu-notes .icons-notes:before{font-size:20px;line-height:41px}
-.highlight-menu-notes .icons-notes:after{color:#262625;position:absolute;left:0;right:0;line-height:39px;text-align:center;font-size:14px}
+.btn-highlight-menu:hover {
+  cursor: pointer;
+}
+.highlight-menu-buttons .icons-link:before{
+  position:relative;
+  top:1px
+}
+.highlight-menu-notes .icons-notes{
+  position:relative
+}
+.highlight-menu-notes .icons-notes:before{
+  font-size:20px;
+  line-height:41px
+}
+.highlight-menu-notes .icons-notes:after{
+  color:#262625;
+  position:absolute;
+  left:0;
+  right:0;
+  line-height:39px;
+  text-align:center;
+  font-size:14px
+}
 .highlight-menu .highlight-menu-arrow-clip{position:absolute;bottom:-11px;left:50%;clip:rect(12px 24px 24px 0);margin-left:-12px}
 .highlight-menu .highlight-menu-arrow-clip .highlight-menu-arrow{display:block;width:20px;height:20px;-webkit-transform:rotate(45deg) scale(0.5);-moz-transform:rotate(45deg) scale(0.5);-o-transform:rotate(45deg) scale(0.5);transform:rotate(45deg) scale(0.5);background-color:#454543;border:2px solid #121211}
 .highlight-menu:after{content:'';display:block;position:absolute;bottom:-3px;left:50%;margin-left:-4px;width:8px;height:8px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);background:#262625;box-shadow:0 0 2px #262625}

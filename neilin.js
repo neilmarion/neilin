@@ -62,10 +62,16 @@ $(document).ready(function(){
   highlightMenu = '<div class="popup highlight-menu highlight-menu-active">'+
     '<div class="highlight-menu-inner">'+
       '<ul class="highlight-menu-buttons">'+
-        '<li class="highlight-menu-button highlight-menu-notes">'+
-          '<button class="btn-highlight-menu" data-action="highlight">'+
+        '<li class="highlight-menu-button highlight-menu-facebook">'+
+          '<button class="btn-highlight-menu" data-action="facebook">'+
             '<span class="icons icon-facebook"></span>'+
-          '</button></li>'+
+          '</button>'+
+          '</li>'+
+        '<li class="highlight-menu-button highlight-menu-google">'+
+          '<button class="btn-highlight-menu" data-action="google">'+
+            '<span class="icons icon-google-plus"></span>'+
+          '</button>'+
+        '</li>'+
         '<li class="highlight-menu-button highlight-menu-twitter">'+
           '<button class="btn-highlight-menu" data-action="twitter">'+
             '<span class="icons icon-twitter"></span>'+
