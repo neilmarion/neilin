@@ -18,55 +18,25 @@ Neilin.Selector.getSelected = function(){
 }
 
 function computeXY(startX, startY, endX, endY){
-
-
-  //console.log(x+", "+y);
-
-  var range = window.getSelection().getRangeAt(0);
+  range = Neilin.Selector.getSelected().getRangeAt(0);
   range.collapse(false);
-  console.log(range);
-  var dummy = document.createElement("span");
+  dummy = document.createElement("span");
   range.insertNode(dummy);
-  var rect = dummy.getBoundingClientRect();
-  var x = rect.left, y = rect.top;
+  rect = dummy.getBoundingClientRect();
+  endX = rect.left;
+  endY = rect.top;
   dummy.parentNode.removeChild(dummy);
 
-  var endX = x;
-  var endY = y;
-
-  var sel = document.selection, range;
-  var x = 0, y = 0;
-  sel = Neilin.Selector.getSelected(); 
-  if (sel.rangeCount) {
-      range = sel.getRangeAt(0).cloneRange();
-      if (range.getClientRects) {
-          range.collapse(true);
-          var rect = range.getClientRects()[0];
-          x = rect.left;
-          y = rect.top;
-      }
-  }
-
-  var startX = x;
-  var startY = y;
-
-  var y; var addX;
+  range = Neilin.Selector.getSelected().getRangeAt(0); 
+  range.collapse(true);
+  rect = range.getClientRects()[0];
+  startX = rect.left;
+  startY = rect.top;
   
-  if(endY > startY){
-    y = startY; 
-  }else{
-    y = endY;
-  }
-
-  if(endX > startX){
-    addX = startX; 
-  }else{
-    addX = endX;
-  }
-
+  y = endY > startY ? startY : endY;
+  addX = endX > startX ? startX : endX;
 
   x = Math.abs(endX - startX) / 2;
-
   return [addX + x, y];
 }
 
