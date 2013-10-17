@@ -58,6 +58,9 @@ Neilin.Selector.mousedown = function(e){
   window.startY = e.pageY;
 }
 
+
+
+
 $(document).ready(function(){
   highlightMenu = '<div class="popup highlight-menu highlight-menu-active">'+
     '<div class="highlight-menu-inner">'+
@@ -66,7 +69,7 @@ $(document).ready(function(){
           '<button class="btn-highlight-menu" data-action="facebook">'+
             '<span class="icons icon-facebook"></span>'+
           '</button>'+
-          '</li>'+
+        '</li>'+
         '<li class="highlight-menu-button highlight-menu-google">'+
           '<button class="btn-highlight-menu" data-action="google">'+
             '<span class="icons icon-google-plus"></span>'+
@@ -84,5 +87,16 @@ $(document).ready(function(){
   $("body").append(highlightMenu);
   $(document).bind("mouseup", Neilin.Selector.mouseup);
   $(document).bind("mousedown", Neilin.Selector.mousedown);
+
+  $('.btn-highlight-menu').on("click", function(e){
+    action = $(this).data('action')
+    switch(action) {
+      case 'twitter':
+        win = window.open('https://twitter.com/intent/tweet?text=hello','','width=200,height=100');
+        win.focus();
+        break;
+    }
+  });
 });
+
 

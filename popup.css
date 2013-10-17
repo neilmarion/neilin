@@ -56,9 +56,11 @@
 .highlight-menu-button.active .icons:before{
   color:#60d778
 }
+
 .btn-highlight-menu:hover {
   cursor: pointer;
 }
+
 .highlight-menu-buttons .icons-link:before{
   position:relative;
   top:1px
