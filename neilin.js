@@ -95,6 +95,9 @@ $(document).ready(function(){
         win = window.open('https://twitter.com/intent/tweet?text=hello','','width=200,height=100');
         win.focus();
         break;
+      case 'facebook':
+        win = window.open('https://www.facebook.com/sharer/sharer.php?u=www.neilmarion.com','','width=200,height=100');
+        break;
     }
   });
 });
