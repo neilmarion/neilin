@@ -96,7 +96,11 @@ $(document).ready(function(){
         win.focus();
         break;
       case 'facebook':
-        win = window.open('https://www.facebook.com/sharer/sharer.php?u=www.neilmarion.com','','width=200,height=100');
+        win = window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.pathname,'','width=200,height=100');
+        win.elements['input'].value = 'hello';
+        break;
+      case 'google':
+        win = window.open('https://plus.google.com/share?url='+window.location.pathname,'','width=200,height=100');
         break;
     }
   });
