@@ -1,7 +1,6 @@
 
 .highlight-menu {
   position:absolute;
-  visibility:visible;
   display:inline-block;
   z-index:500;
   -webkit-transition:none;
@@ -90,9 +89,9 @@
 .highlight-menu-linkinput{display:none;position:absolute;top:0;left:0;right:0;bottom:0}
 .highlight-menu-linkinput-field{background:rgba(0,0,0,0);position:absolute;top:0;right:40px;left:10px;padding:7px 0;-webkit-appearance:none;-moz-appearance:none;color:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:0;outline:0;font-family:"ff-tisa-web-pro",Georgia,Cambria,"Times New Roman",Times,serif;font-weight:400;font-size:16px;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 .highlight-menu-linkinput .btn-highlight-menu{position:absolute;top:0;right:0;bottom:4px}
-.highlight-menu-linkmode .highlight-menu-buttons{visibility:hidden}
+.highlight-menu-linkmode .highlight-menu-buttons{}
 .highlight-menu-linkmode .highlight-menu-linkinput{display:block;-webkit-animation:pop-upwards 180ms forwards linear;-moz-animation:pop-upwards 180ms forwards linear;-ms-animation:pop-upwards 180ms forwards linear;-o-animation:pop-upwards 180ms forwards linear;animation:pop-upwards 180ms forwards linear}[contenteditable] a{cursor:text}
-.highlight-menu-active{visibility:visible;-webkit-transition:top .075s ease-out,left .075s ease-out;-moz-transition:top .075s ease-out,left .075s ease-out;-ms-transition:top .075s ease-out,left .075s ease-out;-o-transition:top .075s ease-out,left .075s ease-out;transition:top .075s ease-out,left .075s ease-out;-webkit-animation:pop-upwards 180ms forwards linear;-moz-animation:pop-upwards 180ms forwards linear;-ms-animation:pop-upwards 180ms forwards linear;-o-animation:pop-upwards 180ms forwards linear;animation:pop-upwards 180ms forwards linear}
+.highlight-menu-active{-webkit-transition:top .075s ease-out,left .075s ease-out;-moz-transition:top .075s ease-out,left .075s ease-out;-ms-transition:top .075s ease-out,left .075s ease-out;-o-transition:top .075s ease-out,left .075s ease-out;transition:top .075s ease-out,left .075s ease-out;-webkit-animation:pop-upwards 180ms forwards linear;-moz-animation:pop-upwards 180ms forwards linear;-ms-animation:pop-upwards 180ms forwards linear;-o-animation:pop-upwards 180ms forwards linear;animation:pop-upwards 180ms forwards linear}
 
 .icons{width:20px;padding-right:4px;display:inline-block;text-align:center}
 .icons{color:#b3b3b1;float:right;margin-top:2px;margin-right:10px}
@@ -112,5 +111,6 @@
 
 .popup {
   display: none;
+  opacity: 0.9;
 }
 

@@ -59,8 +59,8 @@ Neilin.Selector.mouseup = function(e){
 
   if(window.startX + window.startY != window.endX + window.endY && st!='') {
     xy = computeXY();
-    $(".popup").css({"left": xy['x']-40, "top": xy['y']-65});
-    $(".popup").show();
+    $(".popup").css({"left": xy['x']-40, "top": xy['y']-45});
+    $(".popup").show().animate({ top: xy['y']-65}, {duration: 500, easing: 'easeOutElastic'})
   } else {
     $(".popup").hide();
   }
