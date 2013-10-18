@@ -97,18 +97,9 @@
 .icons{color:#b3b3b1;float:right;margin-top:2px;margin-right:10px}
 .icons{margin:0}
 
-.icons-twitter:before{content:"\e029"}
-.icons-twitter:before{color:#fff;font-size:23px;line-height:0;position:relative;top:2px}
-.icons-twitter:before{top:3px}
-.icons-twitter:before,.btn:hover .icons-heart:before,.btn:hover .icons-solid-check:before,.btn:hover .icons-follow:before{color:#fff}
-.icons-twitter:before{top:1px}
-
-.icons-notes:before{content:"\e029"}
-.icons-notes:before{color:#fff;font-size:23px;line-height:0;position:relative;top:2px}
-.icons-notes:before{top:3px}
-.icons-notes:before,.btn:hover .icons-heart:before,.btn:hover .icons-solid-check:before,.btn:hover .icons-follow:before{color:#fff}
-.icons-notes:before{top:1px}
-
+.icons.icon-twitter{height: 42px; width: 24px}
+.icons.icon-facebook{height: 42px; width: 24px}
+.icons.icon-google-plus{height: 42px; width: 24px}
 .popup {
   display: none;
   opacity: 0.9;
