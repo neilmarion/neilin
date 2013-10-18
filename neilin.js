@@ -61,6 +61,7 @@ Neilin.Selector.mouseup = function(e){
     xy = computeXY();
     $(".popup").css({"left": xy['x']-40, "top": xy['y']-45});
     $(".popup").show().animate({ top: xy['y']-65}, {duration: 500, easing: 'easeOutElastic'})
+
   } else {
     $(".popup").hide();
   }
@@ -105,7 +106,7 @@ $(document).ready(function(){
     action = $(this).data('action')
     switch(action) {
       case 'twitter':
-        win = window.open('https://twitter.com/intent/tweet?text=' + formatMessage(window.st) + 'http://stackoverflow.com/questions/5379120/get-the-highlighted-selected-text','','width=200,height=100');
+        win = window.open('https://twitter.com/intent/tweet?text=' + formatMessage(window.st) + window.location.href,'','width=200,height=100');
         win.focus();
         break;
       case 'facebook':
