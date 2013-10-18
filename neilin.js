@@ -15,6 +15,16 @@ Neilin.Selector.getSelected = function(){
   return t;
 }
 
+function formatMessage(message){
+  if (message.length > 112){
+    message = message.substring(0, 112);
+    message = '"'+ message  +'..." ' 
+  } else {
+    message = '"'+ message  +'" ' 
+  }
+  return message;
+}
+
 function computeXY(){
   range = Neilin.Selector.getSelected().getRangeAt(0);
   range.collapse(false);
@@ -44,6 +54,9 @@ Neilin.Selector.mouseup = function(e){
 
 
   st = Neilin.Selector.getSelected();
+  st = st.toString();
+  window.st = st;
+
   if(window.startX + window.startY != window.endX + window.endY && st!='') {
     xy = computeXY();
     $(".popup").css({"left": xy['x']-40, "top": xy['y']-65});
@@ -92,15 +105,15 @@ $(document).ready(function(){
     action = $(this).data('action')
     switch(action) {
       case 'twitter':
-        win = window.open('https://twitter.com/intent/tweet?text=hello','','width=200,height=100');
+        win = window.open('https://twitter.com/intent/tweet?text=' + formatMessage(window.st) + 'http://stackoverflow.com/questions/5379120/get-the-highlighted-selected-text','','width=200,height=100');
         win.focus();
         break;
       case 'facebook':
-        win = window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.pathname,'','width=200,height=100');
+        win = window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'','width=200,height=100');
         win.elements['input'].value = 'hello';
         break;
       case 'google':
-        win = window.open('https://plus.google.com/share?url='+window.location.pathname,'','width=200,height=100');
+        win = window.open('https://plus.google.com/share?url='+window.location.href,'','width=200,height=100');
         break;
     }
   });
