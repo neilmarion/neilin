@@ -1,6 +1,6 @@
 var TWITTER_SHARE_URL = 'https://twitter.com/intent/tweet?text='
-var GOOGLEPLUS_SHARE_URL = 'https://www.facebook.com/sharer/sharer.php?u='
-var FACEBOOKSHARE_URL = 'https://plus.google.com/share?url='
+var GOOGLEPLUS_SHARE_URL = 'https://plus.google.com/share?url='
+var FACEBOOK_SHARE_URL = 'https://www.facebook.com/sharer/sharer.php?u='
 
 if(!window.Neilin){
   Neilin = {}
@@ -106,11 +106,9 @@ $(document).ready(function(){
     switch(action) {
       case 'twitter':
         win = window.open(TWITTER_SHARE_URL+ formatMessage(window.st) + window.location.href,'','width=200,height=100')
-        win.focus()
         break
       case 'facebook':
         win = window.open(FACEBOOK_SHARE_URL+window.location.href,'','width=200,height=100')
-        win.elements['input'].value = 'hello'
         break
       case 'google':
         win = window.open(GOOGLEPLUS_SHARE_URL+window.location.href,'','width=200,height=100')
