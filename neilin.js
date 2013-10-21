@@ -30,7 +30,6 @@ function formatMessage(message){
 
 function computeXY(){
   range = Neilin.Selector.getSelected().getRangeAt(0)
-  range.collapse(false)
   dummy = document.createElement("span")
   range.insertNode(dummy)
   rect = dummy.getBoundingClientRect()
@@ -39,7 +38,6 @@ function computeXY(){
   dummy.parentNode.removeChild(dummy)
 
   range = Neilin.Selector.getSelected().getRangeAt(0) 
-  range.collapse(true)
   rect = range.getClientRects()[0]
   startX = rect.left
   startY = rect.top
